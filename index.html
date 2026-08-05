@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr" id="htmlTag">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">Élevage Premium</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" class="logo" alt="Logo Élevage Premium">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" data-lang="nav_home">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services" data-lang="nav_services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#demande" data-lang="nav_accompagnement">Accompagnement</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact" data-lang="nav_contact">Contact</a>
+                    </li>
+                </ul>
+                <div class="ms-4 lang-buttons">
+                    <button class="btn btn-success btn-sm" onclick="changeLanguage('fr')">FR</button>
+                    <button class="btn btn-outline-success btn-sm" onclick="changeLanguage('ar')">AR</button>
+                    <button class="btn btn-outline-success btn-sm" onclick="changeLanguage('en')">EN</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 data-lang="hero_title">ÉLEVAGE PREMIUM</h1>
+                    <h2 data-lang="hero_subtitle">La révolution de l'élevage au Maroc</h2>
+                    <p data-lang="hero_desc">
+                        Des solutions scientifiques et pratiques inspirées des meilleures exploitations du Maroc et du monde.
+                        Nous accompagnons les éleveurs dans l'alimentation, la reproduction, la génétique et la santé animale afin d'obtenir une production maximale avec un minimum de dépenses.
+                    </p>
+                    <a href="#demande" class="btn btn-warning btn-lg" data-lang="hero_btn">
+                        Demander un accompagnement
+                    </a>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="images/cover.png" class="img-fluid hero-image" alt="Élevage au Maroc">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRESENTATION -->
+    <section class="presentation">
+        <div class="container">
+            <h2 data-lang="pres_title">Notre Vision</h2>
+            <p data-lang="pres_desc">
+                Chez Élevage Premium, nous croyons en un élevage moderne, rentable et durable. Grâce à une expertise de pointe et des méthodes adaptées au contexte marocain, nous aidons chaque éleveur à optimiser ses performances zootechniques et économiques.
+            </p>
+        </div>
+    </section>
+
+    <!-- ESPECES -->
+    <section class="especes">
+        <div class="container">
+            <h2 data-lang="spec_title">Espèces Concernées</h2>
+            <div class="animals">
+                <div class="animal-card">
+                    <img src="images/bovin.png" alt="Bovins">
+                    <h3>Bovins</h3>
+                </div>
+                <div class="animal-card">
+                    <img src="images/ovin.png" alt="Ovins">
+                    <h3>Ovins</h3>
+                </div>
+                <div class="animal-card">
+                    <img src="images/caprin.png" alt="Caprins">
+                    <h3>Caprins</h3>
+                </div>
+                <div class="animal-card">
+                    <img src="images/equide.png" alt="Équidés">
+                    <h3 data-lang="spec_equide">Équidés</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="text-center mb-5" style="color: #0B5D3B; font-weight: 700; font-size: 42px;" data-lang="serv_title">Nos Domaines d'Expertise</h2>
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="animal-card p-4 h-100">
+                        <h3 class="h5 mb-3" data-lang="serv_1_title">Conduite Technique</h3>
+                        <p class="text-muted small" data-lang="serv_1_desc">Maîtrise globale des itinéraires techniques de l'exploitation pour une rentabilité optimale.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="animal-card p-4 h-100">
+                        <h3 class="h5 mb-3" data-lang="serv_2_title">Alimentation & Nutrition</h3>
+                        <p class="text-muted small" data-lang="serv_2_desc">Formulation de rations équilibrées pour maximiser la production laitière et l'engraissement.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="animal-card p-4 h-100">
+                        <h3 class="h5 mb-3" data-lang="serv_3_title">Génétique & Reproduction</h3>
+                        <p class="text-muted small" data-lang="serv_3_desc">Amélioration du cheptel par le choix rigoureux des souches et le suivi de la reproduction.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="animal-card p-4 h-100">
+                        <h3 class="h5 mb-3" data-lang="serv_4_title">Santé & Biosécurité</h3>
+                        <p class="text-muted small" data-lang="serv_4_desc">Protocoles préventifs et gestion sanitaire pour réduire la mortalité et les dépenses vétérinaires.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULAIRE D'ACCOMPAGNEMENT -->
+    <section id="demande" class="demande">
+        <div class="container">
+            <h2 data-lang="form_title">Demander un Accompagnement</h2>
+            <p class="intro-form" data-lang="form_subtitle">
+                Remplissez le formulaire ci-dessous pour bénéficier de conseils personnalisés adaptés à votre exploitation.
+            </p>
+            
+            <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+                <!-- Clé Web3Forms -->
+                <input type="hidden" name="access_key" value="8148ee42-fc0b-4e41-86cb-5786e7b73d54">
+                <input type="hidden" name="subject" value="Nouvelle demande d'accompagnement - Élevage Premium">
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="text" name="nom" id="inputNom" placeholder="Votre Nom complet" required>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" name="telephone" id="inputTel" placeholder="Numéro de Téléphone" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="text" name="ville" id="inputVille" placeholder="Ville / Région au Maroc" required>
+                    </div>
+                    <div class="col-md-6">
+                        <select id="serviceDesire" name="service_desire" class="form-select" required>
+                            <option value="" data-lang="opt_select_service">Sélectionnez le service désiré</option>
+                            <option value="conduite_alimentaire" data-lang="serv_opt_1">Conduite alimentaire</option>
+                            <option value="amelioration_genetique" data-lang="serv_opt_2">Amélioration génétique</option>
+                            <option value="cas_pathologique" data-lang="serv_opt_3">Cas pathologique</option>
+                            <option value="conduite_technique_globale" data-lang="serv_opt_4">Conduite technique globale</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <select id="espece" name="espece" class="form-select" required>
+                            <option value="" data-lang="opt_select_espece">Sélectionnez l'espèce principale</option>
+                            <option value="bovin" data-lang="opt_bovin">Bovin</option>
+                            <option value="ovin" data-lang="opt_ovin">Ovin</option>
+                            <option value="caprin" data-lang="opt_caprin">Caprin</option>
+                            <option value="equide" data-lang="opt_equide">Équidé</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Conteneur dynamique géré par le JavaScript -->
+                <div id="categorieContainer" class="mb-3"></div>
+
+                <textarea name="message" id="inputMsg" placeholder="Décrivez votre projet ou vos difficultés actuelles..." required></textarea>
+
+                <button type="submit" id="submitBtn" data-lang="form_btn">Envoyer la demande</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 data-lang="contact_title">Contactez-nous</h2>
+            <p><strong data-lang="contact_phone">Téléphone :</strong> +212 6 30 521 103</p>
+            <p><strong data-lang="contact_email">Email :</strong> elevagepremium@gmail.com</p>
+            <p><strong data-lang="contact_address">Adresse :</strong> Casablanca, Maroc</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <img src="images/logo.png" alt="Logo Footer">
+            <p>&copy; 2026 Élevage Premium. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

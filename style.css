@@ -1,0 +1,390 @@
+/*==================================================
+            ÉLEVAGE PREMIUM
+            STYLE VERSION FINALE
+==================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#F8F9F5;
+    color:#222;
+    overflow-x:hidden;
+}
+
+/* Support RTL pour l'Arabe */
+body[dir="rtl"] {
+    text-align: right;
+}
+body[dir="rtl"] .navbar-nav {
+    margin-right: auto;
+    margin-left: 0 !important;
+}
+body[dir="rtl"] .navbar-nav .nav-link {
+    margin-left: 0;
+    margin-right: 18px;
+}
+body[dir="rtl"] .lang-buttons {
+    margin-left: 0 !important;
+    margin-right: 1.5rem !important;
+}
+
+/*==========================
+ NAVBAR
+==========================*/
+.navbar{
+    background:#ffffff !important;
+    padding:18px 0;
+    transition:.4s;
+    border-bottom:1px solid #e8e8e8;
+    backdrop-filter:blur(12px);
+    z-index:9999;
+}
+
+.navbar.scrolled{
+    background:#0B5D3B !important;
+}
+
+.navbar.scrolled .nav-link{
+    color:white !important;
+}
+
+.navbar.scrolled .btn-outline-success{
+    border-color:white;
+    color:white;
+}
+
+.logo{
+    width:85px;
+    transition:.4s;
+}
+
+.navbar-nav .nav-link{
+    font-size:17px;
+    font-weight:600;
+    color:#0B5D3B !important;
+    margin-left:18px;
+    transition:.3s;
+}
+
+.navbar-nav .nav-link:hover{
+    color:#C9A227 !important;
+}
+
+/*==========================
+ HERO
+==========================*/
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    background:linear-gradient(135deg,#eef8ef,#ffffff);
+    padding-top:120px;
+}
+
+.hero h1{
+    font-size:68px;
+    font-weight:700;
+    color:#0B5D3B;
+    margin-bottom:15px;
+}
+
+.hero h2{
+    font-size:34px;
+    color:#C9A227;
+    margin-bottom:25px;
+    font-weight:600;
+}
+
+.hero p{
+    font-size:19px;
+    line-height:1.9;
+    margin-bottom:35px;
+    color:#444;
+}
+
+.hero-image{
+    width:100%;
+    max-width:650px;
+    animation:float 5s ease-in-out infinite;
+}
+
+/*=========================================
+ PRESENTATION
+=========================================*/
+.presentation{
+    padding:100px 0;
+    background:#ffffff;
+}
+
+.presentation h2{
+    text-align:center;
+    font-size:42px;
+    color:#0B5D3B;
+    margin-bottom:35px;
+    font-weight:700;
+}
+
+.presentation p{
+    max-width:1000px;
+    margin:auto;
+    text-align:center;
+    font-size:19px;
+    line-height:2;
+    color:#555;
+}
+
+/*=========================================
+ ESPECES & SERVICES
+=========================================*/
+.especes{
+    padding:100px 0;
+    background:#F4FAF4;
+}
+
+.especes h2{
+    text-align:center;
+    color:#0B5D3B;
+    font-size:42px;
+    margin-bottom:60px;
+    font-weight:700;
+}
+
+.animals{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:35px;
+}
+
+.animal-card{
+    background:white;
+    border-radius:25px;
+    padding:30px;
+    text-align:center;
+    transition:.4s;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.animal-card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 20px 45px rgba(0,0,0,.15);
+}
+
+.animal-card img{
+    width:100%;
+    height:180px;
+    object-fit:contain;
+    margin-bottom:20px;
+}
+
+.animal-card h3{
+    color:#0B5D3B;
+    font-size:23px;
+    font-weight:600;
+}
+
+/*=========================================
+ SERVICES
+=========================================*/
+.services{
+    padding:100px 0;
+    background:linear-gradient(135deg,#eef8ef,#ffffff);
+}
+
+/*=========================================
+ FORMULAIRE D'ACCOMPAGNEMENT
+=========================================*/
+.demande{
+    padding:100px 0;
+    background:#eef8ef;
+}
+
+.demande h2{
+    text-align:center;
+    font-size:42px;
+    color:#0B5D3B;
+    margin-bottom:20px;
+}
+
+.intro-form{
+    text-align:center;
+    max-width:900px;
+    margin:0 auto 50px;
+    color:#555;
+    line-height:1.8;
+    font-size:18px;
+}
+
+form{
+    max-width:900px;
+    margin:auto;
+    background:white;
+    padding:50px;
+    border-radius:25px;
+    box-shadow:0 20px 50px rgba(0,0,0,.08);
+}
+
+form input,
+form select,
+form textarea{
+    width:100%;
+    padding:16px 20px;
+    margin-bottom:20px;
+    border:1px solid #d9d9d9;
+    border-radius:12px;
+    font-size:16px;
+    font-family:Poppins,sans-serif;
+    transition:.3s;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus{
+    outline:none;
+    border-color:#0B5D3B;
+    box-shadow:0 0 10px rgba(11,93,59,.2);
+}
+
+form textarea{
+    min-height:170px;
+    resize:vertical;
+}
+
+form button{
+    width:100%;
+    padding:18px;
+    background:#0B5D3B;
+    color:white;
+    border:none;
+    border-radius:50px;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+form button:hover{
+    background:#C9A227;
+}
+
+/*=========================================
+ CONTACT & FOOTER
+=========================================*/
+.contact{
+    padding:90px 0;
+    background:white;
+    text-align:center;
+}
+
+.contact h2{
+    color:#0B5D3B;
+    font-size:42px;
+    margin-bottom:30px;
+}
+
+.contact p{
+    font-size:18px;
+    color:#555;
+    margin-bottom:15px;
+}
+
+footer{
+    background:#0B5D3B;
+    color:white;
+    padding:40px 0;
+    text-align:center;
+}
+
+footer img{
+    width:90px;
+    margin-bottom:20px;
+}
+
+footer p{
+    margin:0;
+    font-size:16px;
+}
+
+/*=========================================
+ ANIMATIONS & BOUTONS
+=========================================*/
+.fade-up{
+    animation:fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+    from{opacity:0;transform:translateY(50px);}
+    to{opacity:1;transform:translateY(0);}
+}
+
+@keyframes float{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-10px);}
+    100%{transform:translateY(0);}
+}
+
+.btn{
+    transition:.4s;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 30px rgba(0,0,0,.2);
+}
+
+.btn-success{
+    background:#0B5D3B;
+    border:none;
+}
+
+.btn-success:hover{
+    background:#0d7048;
+}
+
+.btn-outline-success{
+    border:2px solid #0B5D3B;
+    color:#0B5D3B;
+}
+
+.btn-outline-success:hover{
+    background:#0B5D3B;
+    color:white;
+}
+
+.btn-warning{
+    background:#C9A227;
+    border:none;
+    color:white;
+    padding:15px 35px;
+    font-size:18px;
+    border-radius:50px;
+}
+
+.btn-warning:hover{
+    background:#b48b10;
+}
+
+/* SCROLLBAR & RESPONSIVE */
+::-webkit-scrollbar{width:10px;}
+::-webkit-scrollbar-track{background:#eeeeee;}
+::-webkit-scrollbar-thumb{background:#0B5D3B;border-radius:20px;}
+
+@media(max-width:992px){
+    .hero{padding-top:140px;text-align:center;}
+    .hero h1{font-size:48px;}
+    .hero h2{font-size:28px;}
+    .hero-image{margin-top:40px;}
+}
+
+@media(max-width:768px){
+    .hero h1{font-size:36px;}
+    .hero h2{font-size:23px;}
+}
